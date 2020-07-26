@@ -5,11 +5,11 @@ export class ContactsAPI {
     constructor(private api: Express, private contactsHandler: ContactsHandler) {}
 
     initializeRoutes() {
-        this.api.get("/api/contacts", this.getContacts);
-        this.api.get("/api/contacts/:contactId", this.getContact);
-        this.api.post("/api/contacts", this.addContact);
-        this.api.put("/api/contacts", this.updateContact);
-        this.api.delete("/api/contacts/:contactId", this.deleteContact);
+        this.api.get("/api/contacts", this.getContacts.bind(this));
+        this.api.get("/api/contacts/:contactId", this.getContact.bind(this));
+        this.api.post("/api/contacts", this.addContact.bind(this));
+        this.api.put("/api/contacts", this.updateContact.bind(this));
+        this.api.delete("/api/contacts/:contactId", this.deleteContact.bind(this));
     }
 
     getContacts(req: Request, res: Response) {

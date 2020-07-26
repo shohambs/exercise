@@ -1,0 +1,39 @@
+.contact-card {
+    min-height: 80px;
+    max-width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+.contact-card-options {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.contact-card-options * {
+    margin: 0px 5px;
+    border: 1px solid lightgray;
+    outline: none;
+    border-radius: 5px;
+}
+
+.contact-card-options *:hover {
+    cursor: pointer;
+}
+
+.contact-card-options .contact-edit {
+    background-color: burlywood;
+}
+
+.contact-card-options .contact-delete {
+    background-color: lightcoral;
+}
+
+.contact-card-content {
+    display: flex;
+    flex-direction: column;
+}
