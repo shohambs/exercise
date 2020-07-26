@@ -4,6 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "npm run build && node app.js",
+    "build": "tsc -p .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,6 +13,14 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "typescript": "^3.9.7"
+    "lodash": "^4.17.19",
+    "typescript": "^3.9.7",
+    "uuid": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.7",
+    "@types/lodash": "^4.14.158",
+    "@types/uuid": "^8.0.0"
   }
 }
